@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/css/login.css"></link>
+<head th:include="layout :: htmlhead" th:with="title='后台管理'">
+</head>
+<body background="images\bg.jpg">
+	<form class="layui-form" action="" method="post" id="useLogin">
+		<div class="container">
+
+			<div class="layui-form-mid layui-word-aux">
+				<img id="logoid" src="images\06.png" height="35">
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">用户名</label>
+				<div class="layui-input-block">
+					<input type="text" id="username" name="username" required lay-verify="required"
+						placeholder="请输入用户名" autocomplete="off" class="layui-input">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">密 &nbsp;&nbsp;码</label>
+				<div class="layui-input-inline">
+					<input type="password" id="password" name="password" required
+						lay-verify="required" placeholder="请输入密码" autocomplete="off"
+						class="layui-input">
+				</div>
+				<!-- <div class="layui-form-mid layui-word-aux">辅助文字</div> -->
+			</div>
+			<!-- <div class="layui-form-item">
+				<label class="layui-form-label">验证码</label>
+				<div class="layui-input-inline">
+					<input type="text" name="title" required lay-verify="required"
+						placeholder="请输入验证码" autocomplete="off" class="layui-input verity">
+				</div>
+				<div class="layui-form-mid layui-word-aux">辅助文字</div>
+
+			</div> -->
+			<div class="layui-form-item">
+				<label class="layui-form-label">记住密码</label>
+				<div class="layui-input-block">
+					<input type="checkbox" name="rememberMe" lay-skin="switch"
+						lay-text="ON|OFF">
+				</div>
+			</div>
+
+			<div class="layui-form-item">
+				<div class="layui-input-block" style="margin-top:30px;">
+					<button class="layui-btn" lay-submit="" lay-filter="login">登陆</button>
+				</div>
+			</div>
+			<!-- <a href="" class="font-set">忘记密码?</a> <a href="" class="font-set">立即注册</a> -->
+		</div>
+	</form>
+	
+	<script type="text/javascript" src="/js/login.js"></script>
+</body>
+</html>

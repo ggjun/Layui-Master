@@ -1,0 +1,89 @@
+.yusi-logo {
+    display: inline-block;
+    cursor: pointer;
+    font-family: Handlee, "STKaiti", "Microsoft Yahei", arial, sans-serif;
+    font-weight: 100;
+    padding: 30px 0px 20px;
+    
+}
+
+.yusi-logo:hover {
+	transform: scale(1.1);
+	
+}
+
+
+.yusi-mono {
+    letter-spacing: -2px;
+    position: relative;
+    color: #fff;
+    font-size: 54px;
+    text-shadow: 0 0 1px rgba(94,255,216,0.8);
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+    transition: all .5s ease;
+   
+}
+
+
+.yusi-bloger {
+    position: relative;
+    color: #fff;
+    font-weight: normal;
+    font-size: 24px;
+    text-shadow: 0 0 1px rgba(94,255,216,0.8);
+    margin-left: -6px;
+    letter-spacing: -2px;
+    padding: 0;
+    z-index: 2;
+    
+}
+
+.speedbar {
+    clear: both;
+    color: #666;
+    background-color: #fbfbfb;
+    padding: 8px 0px 18px;
+    line-height: 25px;
+    overflow: hidden;
+    height: 14px;
+    margin-bottom: 10px;
+    max-width: 1226px;
+    margin:0 auto;
+}
+
+.pull-right {
+    float: right;
+}
+
+.speedbar i {
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
+
+
+
+.fa {
+	 font-weight: bold;
+	 width: 16px;
+     font-size: 1.23em;
+}
+
+.lb {
+	 font-weight: bold;
+	 width: 16px;
+     font-size: 1.23em;
+     color:#00a67c;
+}
+
+.pull-right a {
+	color:#00a67c;
+}
+
+.pull-right a:hover{
+	color:#007046;
+}
+
+
+

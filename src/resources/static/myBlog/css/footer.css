@@ -1,0 +1,52 @@
+.footer {
+    background: #333;
+    border-top: 8px solid #00a67c;
+    -webkit-box-shadow: 0 -5px 0 rgba(0,0,0,.1);
+    -moz-box-shadow: 0 -8px 0 rgba(0,0,0,.1);
+    box-shadow: 0 -8px 0 rgba(0,0,0,.1);
+    position: relative;
+}
+
+.footer-inner {
+    max-width: 1226px;
+    padding: 16px 20px 14px;
+    margin: 0 auto;
+    color: #aaa;
+    text-shadow: 0 -1px 0 #333;
+}
+
+.rollto {
+    position: fixed;
+    right: 20px;
+    bottom: 70px;
+    z-index: 999;
+    width: 32px;
+    display: none;
+}
+
+.rollto .btn {
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.rollto .btn {
+    margin-top: 2px;
+    padding: 9px 10px 9px;
+    height: 36px;
+}
+
+.btn-inverse {
+    color: #fff;
+    background-color: #11a99b;
+}
+.copyright{
+	margin:0 auto;
+	width:600px;
+}
+
+.copyright a{
+	color:white;
+}

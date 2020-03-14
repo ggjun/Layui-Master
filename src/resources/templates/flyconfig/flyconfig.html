@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head th:include="layout :: htmlhead" th:with="title='管理'"></head>
+
+
+<body class="layui-layout-body">
+	<div class="layui-fluid">
+		<div class="layui-card">
+			<div class="layui-card-body">
+				<form id="userSearch" class="layui-form layui-form-pane"
+					method="post" action="">
+					<div class="layui-form-item">
+						<label class="layui-form-label">参数名</label>
+						<div class="layui-input-inline">
+							<input id="configname" name="configname" autocomplete="off"
+								class="layui-input" type="text" />
+						</div>
+						
+						<label class="layui-form-label">参数描述</label>
+						<div class="layui-input-inline">
+							<input id="note" name="note" autocomplete="off"
+								class="layui-input" type="text" />
+						</div>
+						
+						<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+						<button class="layui-btn" lay-submit="" lay-filter="searchSubmit">提交</button>
+					</div>
+
+				</form>
+
+				<hr class="layui-bg-black" />
+				<button class="layui-btn layui-btn-normal" onclick="add()">新增</button>
+				<button class="layui-btn layui-btn-danger" onclick="delSelect()">删除选定</button>
+
+				<table id="configList" lay-filter="configTable"></table>
+
+
+
+				<script type="text/html" id="optBar">
+           		 <a class="layui-btn layui-btn-xs" lay-event="edit" style="width:50px;font-size:13px;">编辑</a>
+           		
+            	 <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="detail" style="width:50px;font-size:13px;">查看</a>
+         		</script>
+
+			</div>
+
+			<!--添加或编辑-->
+			<div id="setConfig" class="layer_self_wrap"
+				style="width: 500px; display: none;">
+				<form id="configForm" class="layui-form layui-form-pane"
+					method="post" action="" style="margin-top: 20px;">
+					<input id="id" type="hidden" name="id" />
+					
+					<div class="layui-form-item">
+						<label class="layui-form-label">参数名</label>
+						<div class="layui-input-inline">
+							<input id="cname" name="configname" lay-verify="required"
+								autocomplete="off" class="layui-input" type="text" />
+						</div>
+					</div>
+					
+					<div class="layui-form-item">
+						<label class="layui-form-label">参数值</label>
+						<div class="layui-input-inline">
+							<input id="cvalue" name="configvalue" autocomplete="off" class="layui-input"
+								type="text" />
+						</div>
+					</div>
+					
+					<div class="layui-form-item">
+						<label class="layui-form-label">参数描述</label>
+						<div class="layui-input-block">
+							<input id="descpt" name="note" lay-verify="required"
+								autocomplete="off" class="layui-input" type="text" />
+						</div>
+					</div>
+					
+					
+					<div class="layui-form-item">
+						<div class="layui-input-block" style="margin-left: 200px;"
+							id="operate">
+							<button class="layui-btn" lay-submit=""
+								lay-filter="configSubmit">提交</button>
+							<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<script src="/js/flyconfig/flyconfig.js"></script>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+
+
+
+<body>
+	<div th:fragment="header">
+
+		<div class="layui-header"
+			style="background-color: #00a67c; height: 105px; text-align: center">
+			<div class="yusi-logo">
+				<span class="yusi-mono">晨钟暮鼓的博客</span> <span class="yusi-bloger">岁月的沉淀，总会留下些许酸酸楚楚的味道</span>
+			</div>
+		</div>
+
+		<ul class="menu" style="background-color: #4a4a4a;">
+			<li style="margin-left: 200px;"><a href="/myblog/index">首页</a></li>
+			<li><a href="#">技术杂谈</a>
+				<ul class="submenu">
+					<li><a href="#">JAVA</a></li>
+					<li><a href="#">Vue</a></li>
+					<li><a href="#">大数据</a></li>
+					<li><a href="#">网络爬虫</a></li>
+					<li><a href="#">其它类型</a></li>
+
+				</ul></li>
+			<li class="active"><a href="#s2">生活笔记</a></li>
+			<li><a href="/myblog/content">给我留言</a></li>
+			<li><a href="#">赞助作者</a></li>
+			<li><a href="#">技术交流</a></li>
+		</ul>
+
+
+		<div class="speedbar">
+			<div class="pull-right">
+				<i class="layui-icon layui-icon-username fa"></i> <a href="">投稿</a>&nbsp;&nbsp;&nbsp;
+				<i class="layui-icon layui-icon-logout fa"></i> <a
+					href="">登录</a>
+			</div>
+			<div class="toptip">
+				<i class="layui-icon layui-icon-speaker lb"></i>
+				欢迎来访~
+				
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<div th:replace="myBlog/layout :: htmlhead"></div>
+
+<link rel="stylesheet" type="text/css" href="/myBlog/css/index.css"></link>
+<script src="/myBlog/js/jquery.SuperSlide.2.1.3.js"></script>
+<script src="/myBlog/js/article.js"></script>
+<script src="/myBlog/js/sidebar.js"></script>
+<link rel="stylesheet" type="text/css" href="/myBlog/css/imgslide.css"></link>
+<link rel="stylesheet" type="text/css" href="/myBlog/css/article.css"></link>
+<link rel="stylesheet" type="text/css" href="/myBlog/css/sidebar.css"></link>
+</head>
+
+
+<body>
+
+	<div th:replace="myBlog/bloghead :: header"></div>
+	<div class="content">
+		<div class="content-wrap">
+			<div class="wowslider-container">
+				<div th:replace="myBlog/imgslide :: imgslide"></div>
+			</div>
+			<div class="article">
+				<div th:replace="myBlog/article :: article"></div>
+			</div>
+
+		</div>
+		<div class="sidebar">
+			<div th:replace="myBlog/sidebar :: sidebar"></div>
+		</div>
+	</div>
+
+
+
+	<div th:replace="myBlog/footer :: footer "></div>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+.excerpt {
+    background-color: #fff;
+    padding: 20px 15px 20px 20px;
+    margin-bottom: 10px;
+    position: relative;
+    clear: both;
+}
+
+.excerpt header {
+    margin: 0 10px 15px 0;
+}
+
+.label-important, .badge-important {
+    background-color: #d9534f;
+}
+.label .label-arrow {
+    top: 7px;
+    right: -4px;
+    border-left: 4px solid #000;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left-color: #d9534f;
+}
+
+.excerpt h2 {
+    display: inline;
+    font-size: 20px;
+    margin: 0;
+    font-weight: normal;
+    position: relative;
+    top: 1px;
+    line-height: 25px;
+}
+
+.label-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    vertical-align: top;
+    content: "";
+}
+
+.excerpt header .label {
+    margin-right: 5px;
+    position: relative;
+    top: -2px;
+    padding: 2px 6px 4px;
+    color: white;
+}
+
+
+.excerpt .focus {
+    float: left;
+    margin: 0 20px 0 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: table;
+}
+
+.excerpt .note {
+    color: #777;
+    line-height: 24px;
+    margin-bottom: 0;
+}
+
+.excerpt p.auth-span {
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.muted {
+    color: #999;
+}   
+
+
+.excerpt .muted, .article-header .muted, .article-header .cate {
+    margin-right: 20px;
+}
+
+.xbq{
+	font-weight: bold;
+}
+
+.excerpt a:hover{
+	color:#007046;
+}
+.greencolor{
+	color:#00a67c;
+}
+
+#page {
+	margin-left: 200px;
+	margin-top: 50px;
+}
+ 
+    

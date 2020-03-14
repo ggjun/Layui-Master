@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+
+
+
+<body>
+	<div th:fragment="imgslide">
+		<div id="demo1" class="picBtnTop">
+			<div class="hd">
+				<ul>
+					<li><img src="/myBlog/images/6.jpg" /></li>
+					<li><img src="/myBlog/images/7.jpg" /></li>
+					<li><img src="/myBlog/images/8.jpg" /></li>
+					<li><img src="/myBlog/images/9.jpg" /></li>
+				</ul>
+			</div>
+			<div class="bd">
+				<ul>
+					<li>
+						<div class="bg"></div>
+						<div class="pic">
+							<a href=""><img src="/myBlog/images/6.jpg" /></a>
+						</div>
+						<div class="title">
+							<a href="">效果图1</a>
+						</div>
+					</li>
+					<li>
+						<div class="bg"></div>
+						<div class="pic">
+							<a href=""><img src="/myBlog/images/7.jpg" /></a>
+						</div>
+						<div class="title">
+							<a href="">效果图2</a>
+						</div>
+					</li>
+					<li>
+						<div class="bg"></div>
+						<div class="pic">
+							<a href=""><img src="/myBlog/images/8.jpg" /></a>
+						</div>
+						<div class="title">
+							<a href="">效果图3</a>
+						</div>
+					</li>
+					<li>
+						<div class="bg"></div>
+						<div class="pic">
+							<a href=""><img src="/myBlog/images/9.jpg" /></a>
+						</div>
+						<div class="title">
+							<a href="">效果图4</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			//唯一不同：jQuery("#demo1")
+			jQuery("#demo1").slide({
+				mainCell : ".bd ul",
+				effect : "leftLoop",
+				autoPlay : true,
+				triggerTime:0,
+				interTime:5000
+			});
+			
+		</script>
+
+	</div>
+
+</body>
+
+</html>

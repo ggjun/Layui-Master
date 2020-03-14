@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head th:include="layout :: htmlhead" th:with="title='管理'"></head>
+
+
+<body class="layui-layout-body">
+	<div class="layui-fluid">
+		<div class="layui-card">
+			<div class="layui-card-body">
+				<form id="userSearch" class="layui-form layui-form-pane"
+					method="post" action="">
+					<div class="layui-form-item">
+						<label class="layui-form-label">菜单名</label>
+						<div class="layui-input-inline">
+							<input id="name" name="name" autocomplete="off"
+								class="layui-input" type="text" />
+						</div>
+						<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+						<button class="layui-btn" lay-submit="" lay-filter="searchSubmit">提交</button>
+					</div>
+
+				</form>
+
+				<hr class="layui-bg-black" />
+				<button class="layui-btn layui-btn-normal" onclick="add()">新增</button>
+				<button class="layui-btn layui-btn-danger" onclick="delSelect()">删除选定</button>
+
+				<table id="permissionList" lay-filter="permissionTable"></table>
+
+
+
+				<script type="text/html" id="optBar">
+           		 <a class="layui-btn layui-btn-xs" lay-event="edit" style="width:50px;font-size:13px;">编辑</a>
+           		
+            	 <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="detail" style="width:50px;font-size:13px;">查看</a>
+         		</script>
+
+			</div>
+
+			<!--添加或编辑-->
+			<div id="setPermission" class="layer_self_wrap"
+				style="width: 500px; display: none;">
+				<form id="permissionForm" class="layui-form layui-form-pane"
+					method="post" action="" style="margin-top: 20px;">
+					<input id="id" type="hidden" name="id" />
+					<div class="layui-form-item">
+						<label class="layui-form-label">上级菜单</label>
+						<div class="layui-input-inline">
+							<select name="pid" id="pid">
+								<option value="0">根目录</option>
+								<!--<option th:each="item:${provinces}" th:text="${item.provinceName}"
+                                th:value="${item.id}" ></option>-->
+							</select>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">菜单名称</label>
+						<div class="layui-input-inline">
+							<input id="cdname" name="name" lay-verify="required"
+								autocomplete="off" class="layui-input" type="text" />
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">描述</label>
+						<div class="layui-input-inline">
+							<input id="descpt" name="descpt" lay-verify="required"
+								autocomplete="off" class="layui-input" type="text" />
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">菜单url</label>
+						<div class="layui-input-inline">
+							<input id="url" name="url" autocomplete="off" class="layui-input"
+								type="text" />
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label" style="border-style: none">是否弹出</label>
+						<div class="layui-input-block">
+							<input type="checkbox" name="popup" lay-skin="switch"
+								lay-text="弹出|关闭" id="popup" value="1">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<div class="layui-input-block" style="margin-left: 10px;"
+							id="operate">
+							<button class="layui-btn" lay-submit=""
+								lay-filter="permissionSubmit">提交</button>
+							<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		<!-- 	<script type="text/javascript">
+			$(".layui-table-box").css("height", $(".layui-table-box").css("height"));
+			</script> -->
+
+			<script src="/js/flypermission/permission.js"></script>
+		</div>
+	</div>
+</body>
+</html>
