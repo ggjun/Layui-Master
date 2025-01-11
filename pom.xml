@@ -4,9 +4,9 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.haiyu</groupId>
+	<groupId>com.fly</groupId>
 	<artifactId>Layui-Master</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>jar</packaging>
 
 	<parent>
@@ -149,6 +149,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.7</version>
 				<configuration>
 					<nonFilteredFileExtensions>
 						<nonFilteredFileExtension>woff</nonFilteredFileExtension>

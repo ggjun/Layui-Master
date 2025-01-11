@@ -219,6 +219,8 @@ public class FlyUserController {
         try {
             if (user != null) {
                 if (StringUtil.isNotBlank(user.getId())) {//编辑操作
+                    String password = DigestUtils.Md5(user.getSys_user_name(),user.getSys_user_pwd());
+                    user.setSys_user_pwd(password);
                     userService.updateUser(user);
                     data.put("code", "1");
                     data.put("msg", "保存成功！");
